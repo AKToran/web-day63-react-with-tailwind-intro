@@ -7,3 +7,8 @@
  * add tailwindcss to plugins in vite.config.js
  * import in index.css
  */
+
+:root{
+  max-width: 1240px;
+  margin: 0px auto;
+}
