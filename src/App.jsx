@@ -7,7 +7,7 @@ function App() {
     <>
       <Navbar></Navbar>
       <div className="main-container flex gap-2">
-        <div className="left-container w-3/4 text-center">
+        <div className="left-container w-3/4 ">
           <Blogs></Blogs>
         </div>
         <div className="right-container w-1/4 bg-gray-200">
