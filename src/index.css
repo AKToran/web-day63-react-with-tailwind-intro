@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* 
+ * run install command
+ * import inside vite.config.js
+ * add tailwindcss to plugins in vite.config.js
+ * import in index.css
+ */
