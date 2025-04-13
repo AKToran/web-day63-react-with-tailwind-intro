@@ -1,7 +1,7 @@
 import React from "react";
 import { FaBookmark } from "react-icons/fa";
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleBookmark}) => {
   const { title, description, cover_image, user, tag_list } = blog;
   const { profile_image_90, twitter_username } = user;
   return (
@@ -9,10 +9,16 @@ const Blog = ({ blog }) => {
       <figure>
         <img src={cover_image} alt="Shoes" />
       </figure>
-      <FaBookmark className="absolute end-4" size={50} color="white"></FaBookmark>
+      <FaBookmark 
+      onClick={(e)=>{
+        handleBookmark(blog);
+        e.target.classList.add('text-red-500')
+        // console.log(e);
+      }} 
+      className="absolute end-4 hover:cursor-pointer" size={50} color="white"></FaBookmark>
       <div className="card-body">
         <div>
-          {tag_list.map(tag=> <small className="text-sm"> #{tag}</small>)}
+          {tag_list.map((tag, index)=> <small key={index} className="text-sm"> #{tag}</small>)}
         </div>
         <h2 className="text-2xl font-semibold">{title}</h2>
         <div className="flex items-center gap-2">
